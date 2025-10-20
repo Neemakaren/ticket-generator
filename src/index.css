@@ -1,0 +1,49 @@
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+
+@theme {
+    --font-display: "Inconsolata", serif;
+
+    --color-*: initial;
+    --color-neutral: hsl(0, 0%, 100%);
+    --color-neutral-300: hsl(252, 6%, 83%);
+    --color-neutral-500: hsl(245, 15%, 58%);
+    --color-neutral-700: hsl(245, 19%, 35%);
+    --color-neutral-900: hsl(248, 70%, 10%);
+    --color-orange-500: hsl(7, 88%, 67%);
+    --color-orange-700: hsl(7, 71%, 60%);
+    --color-gradientOrange: hsl(7, 86%, 67%);
+    --color-black: #000;
+}
+
+@layer components {
+    .gradient-text {
+        @apply bg-clip-text inline-block text-transparent bg-gradient-to-r from-gradientOrange to-neutral  ;
+    }
+    .inconsolata-regular {
+        font-family: "Inconsolata", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .inconsolata-medium {
+        font-family: "Inconsolata", serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+    .inconsolata-bold {
+        font-family: "Inconsolata", serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+    .inconsolata-extrabold {
+        font-family: "Inconsolata", serif;
+        font-weight: 800;
+        font-style: normal;
+    }
+}
